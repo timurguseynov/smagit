@@ -19,9 +19,13 @@
 (unless (package-installed-p 'use-package)
   (package-install 'use-package))
 
+(use-package spacemacs-theme :ensure t)
+
 (use-package magit
   :ensure t
   :config
   (setq magit-diff-refine-hunk t)
   (magit-status)
   (delete-other-windows))
+
+(load-theme 'spacemacs-light t)
