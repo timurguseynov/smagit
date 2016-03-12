@@ -1,5 +1,6 @@
 #!/bin/bash
 
+EMACS=/Applications/Emacs.app/Contents/MacOS/Emacs
 HERE=`dirname $0`
 
-emacs -nw -q --load $HERE/init.el
+${EMACS} -q --load $HERE/init.el
