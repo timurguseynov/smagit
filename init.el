@@ -32,6 +32,8 @@
   (magit-status)
   (delete-other-windows))
 
+(global-set-key (kbd "s-g") 'magit-status)
+
 (use-package counsel
   :ensure t
   :config
