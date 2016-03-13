@@ -28,5 +28,10 @@
   (magit-status)
   (delete-other-windows))
 
+(use-package counsel
+  :ensure t
+  :config
+  (ivy-mode 1))
+
 (load-theme 'spacemacs-light t)
 (toggle-frame-maximized)
