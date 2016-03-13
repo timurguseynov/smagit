@@ -1,6 +1,6 @@
 #!/bin/bash
 
 EMACS=/Applications/Emacs.app/Contents/MacOS/Emacs
-HERE=`dirname $0`
+HERE=$(dirname "$(readlink "$0")")
 
 ${EMACS} -q --load $HERE/init.el
