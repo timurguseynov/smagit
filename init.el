@@ -29,3 +29,4 @@
   (delete-other-windows))
 
 (load-theme 'spacemacs-light t)
+(toggle-frame-maximized)
