@@ -34,6 +34,10 @@
 
 (global-set-key (kbd "s-g") 'magit-status)
 
+(use-package fullframe
+  :config
+  (fullframe magit-status magit-mode-quit-window nil))
+
 (use-package counsel
   :ensure t
   :config
