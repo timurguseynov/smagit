@@ -16,6 +16,8 @@ When everything goes OK, you should see Git status screen for your repository. Y
 
 ![smagit status](https://raw.githubusercontent.com/maio/smagit/master/images/smagit.png)
 
+You may also find [Magit Introduction](https://youtu.be/vQO7F2Q9DwA?t=2m44s) screencast useful.
+
 ## License
 
 Copyright © 2016 Marian Schubert
