@@ -29,6 +29,7 @@
   :config
   (setq magit-diff-refine-hunk t)
   (add-hook 'with-editor-mode-hook 'flyspell-mode)
+  (magit-auto-revert-mode -1)
   (magit-status)
   (delete-other-windows))
 
