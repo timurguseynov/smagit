@@ -8,6 +8,8 @@
 (scroll-bar-mode -1)
 (set-frame-font "Andale Mono Regular-15" nil t)
 
+(defalias 'yes-or-no-p 'y-or-n-p)
+
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
