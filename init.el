@@ -33,5 +33,7 @@
   :config
   (ivy-mode 1))
 
+(add-hook 'with-editor-mode-hook 'flyspell-mode)
+
 (load-theme 'spacemacs-light t)
 (toggle-frame-maximized)
