@@ -40,6 +40,8 @@
 
 (use-package counsel
   :ensure t
+  :bind (("s-t" . counsel-git)
+         ("s-/" . counsel-git-grep))
   :config
   (ivy-mode 1))
 
