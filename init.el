@@ -36,6 +36,12 @@
   :config
   (ivy-mode 1))
 
+(use-package spaceline
+  :ensure t
+  :config
+  (require 'spaceline-config)
+  (spaceline-emacs-theme))
+
 (add-hook 'with-editor-mode-hook 'flyspell-mode)
 
 (load-theme 'spacemacs-light t)
