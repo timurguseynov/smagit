@@ -22,7 +22,8 @@
 (unless (package-installed-p 'use-package)
   (package-install 'use-package))
 
-(use-package spacemacs-theme :ensure t)
+(unless (package-installed-p 'spacemacs-theme)
+  (package-install 'spacemacs-theme))
 
 (use-package magit
   :ensure t
