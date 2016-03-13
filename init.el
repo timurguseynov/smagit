@@ -41,7 +41,7 @@
   (fullframe magit-status magit-mode-quit-window nil))
 
 (use-package counsel
-  :ensure t
+  :defer 1
   :bind (("s-t" . counsel-git)
          ("s-/" . counsel-git-grep))
   :config
