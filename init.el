@@ -28,6 +28,7 @@
   :ensure t
   :config
   (setq magit-diff-refine-hunk t)
+  (add-hook 'with-editor-mode-hook 'flyspell-mode)
   (magit-status)
   (delete-other-windows))
 
@@ -41,8 +42,6 @@
   :config
   (require 'spaceline-config)
   (spaceline-emacs-theme))
-
-(add-hook 'with-editor-mode-hook 'flyspell-mode)
 
 (load-theme 'spacemacs-light t)
 (toggle-frame-maximized)
