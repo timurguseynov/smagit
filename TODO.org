@@ -1,0 +1,17 @@
+#+STARTUP: showall
+
+* General [0%]
+- [ ] How to handle installation?
+- [ ] Write Introduction/QuickStart
+
+* Code [20%]
+- [X] Put Git repository name into title
+- [ ] Refresh on focus-in-hook (if showing magit-status)
+- [ ] Make s-g jump to Git status of initial repository
+- [ ] Smooth scrolling
+- [ ] Extract PATH & co using exec-path-from-shell
+- [ ] Sane defaults for Emacs
+
+* Examples
+https://github.com/bbatsov/prelude/blob/master/core/prelude-ui.el
+https://github.com/bbatsov/prelude/blob/master/core/prelude-editor.el

@@ -53,5 +53,13 @@
   (require 'spaceline-config)
   (spaceline-emacs-theme))
 
+(use-package org
+  :config
+  (add-hook 'org-mode-hook 'org-indent-mode))
+
+(use-package org-bullets
+  :config
+  (add-hook 'org-mode-hook 'org-bullets-mode))
+
 (load-theme 'spacemacs-light t)
 (toggle-frame-maximized)
