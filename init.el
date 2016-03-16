@@ -38,7 +38,8 @@
 
 (use-package fullframe
   :config
-  (fullframe magit-status magit-mode-quit-window nil))
+  (fullframe magit-status magit-mode-bury-buffer nil)
+  (fullframe magit-show-commit magit-mode-bury-buffer nil))
 
 (use-package counsel
   :defer 1
