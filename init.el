@@ -39,6 +39,7 @@
 (use-package fullframe
   :config
   (fullframe magit-status magit-mode-bury-buffer nil)
+  (fullframe magit-stash-show magit-mode-bury-buffer nil)
   (fullframe magit-show-commit magit-mode-bury-buffer nil))
 
 (use-package counsel
