@@ -4,9 +4,9 @@
 - [ ] How to handle installation?
 - [ ] Write Introduction/QuickStart
 
-* Code [20%]
+* Code [33%]
 - [X] Put Git repository name into title
-- [ ] Refresh on focus-in-hook (if showing magit-status)
+- [X] Refresh on focus-in-hook (if showing magit-status)
 - [ ] Make s-g jump to Git status of initial repository
 - [ ] Smooth scrolling
 - [ ] Extract PATH & co using exec-path-from-shell

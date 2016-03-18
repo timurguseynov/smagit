@@ -63,5 +63,21 @@
   :config
   (add-hook 'org-mode-hook 'org-bullets-mode))
 
+(use-package smartparens
+  :init
+  (add-hook 'emacs-lisp-mode-hook 'turn-on-smartparens-strict-mode)
+  :config
+  (sp-use-paredit-bindings))
+
+(add-hook 'emacs-lisp-mode-hook 'eldoc-mode)
+
 (load-theme 'spacemacs-light t)
 (toggle-frame-maximized)
+
+(defun maybe-magit-refresh ()
+  (interactive)
+  (when (eq major-mode 'magit-status-mode)
+    (magit-refresh)))
+
+(add-hook 'focus-in-hook 'maybe-magit-refresh)
+
