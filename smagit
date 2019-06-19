@@ -1,7 +1,28 @@
 #!/bin/bash
 
-EMACS=/Applications/Emacs.app/Contents/MacOS/Emacs
 HERE=$(dirname "$(readlink "$0")")
 REPO=$(basename "`pwd`")
+
+case "$(uname -s)" in
+    Darwin)
+        EMACS=/Applications/Emacs.app/Contents/MacOS/Emacs
+        ;;
+
+    Linux)
+        EMACS=emacs
+        ;;
+
+    CYGWIN*|MINGW32*|MSYS*)
+        EMACS=emacs
+        ;;
+
+    # Add here more strings to compare
+    # See correspondence table at the bottom of this answer
+
+    *)
+        echo 'Unsupported OS'
+        exit 2
+        ;;
+esac
 
 ${EMACS} --name="smagit: $REPO" -q --load $HERE/init.el
