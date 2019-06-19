@@ -81,3 +81,7 @@
 
 (add-hook 'focus-in-hook 'maybe-magit-refresh)
 
+(let ((personal-settings "~/.smagit.el"))
+  (when (file-exists-p personal-settings)
+    (message "Loading personal settings...")
+    (load-file personal-settings)))
