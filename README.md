@@ -2,7 +2,9 @@
 
 ## Installation
 
-You will need Emacs from http://emacsformacosx.com/ and checkout of this repository.
+You need recent Emacs (v25+) installed on your system. E.g., for MacOS you can find it at http://emacsformacosx.com/
+
+Then clone this repository and put/link smagit script somewhere in your PATH.
 
     git clone https://github.com/maio/smagit.git
     cd smagit
