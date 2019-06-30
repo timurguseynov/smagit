@@ -64,10 +64,10 @@
   (add-hook 'org-mode-hook 'org-bullets-mode))
 
 (use-package smartparens
-  :init
-  (add-hook 'emacs-lisp-mode-hook 'turn-on-smartparens-strict-mode)
+  :ensure t
   :config
-  (sp-use-paredit-bindings))
+  (require 'smartparens-config)
+  (smartparens-global-mode))
 
 (add-hook 'emacs-lisp-mode-hook 'eldoc-mode)
 
