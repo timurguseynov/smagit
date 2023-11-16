@@ -30,6 +30,10 @@
 (unless (package-installed-p 'evil)
   (package-install 'evil))
 
+(unless (package-installed-p 'hide-mode-line)
+  (package-install 'hide-mode-line))
+
+
 (use-package magit
   :ensure t
   :config
@@ -115,7 +119,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(evil-collection evil spacemacs-theme spaceline smartparens org-bullets magit fullframe counsel)))
+   '(hide-mode-line spacemacs-theme spaceline org-bullets magit fullframe evil-collection counsel)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -123,3 +127,7 @@
  ;; If there is more than one, they won't work right.
  )
 
+(require 'hide-mode-line)
+
+(setq-local hide-mode-line-format '("%b"))
+(hide-mode-line-mode +1)
