@@ -5,9 +5,11 @@
       byte-compile-warnings nil
       inhibit-splash-screen t
       make-backup-files nil)
-(menu-bar-mode 1)
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
+(menu-bar-mode -1)
+;; (scroll-bar-mode -1)
+(if window-system
+    (tool-bar-mode -1)
+)
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
@@ -24,6 +26,9 @@
 
 (unless (package-installed-p 'spacemacs-theme)
   (package-install 'spacemacs-theme))
+
+(unless (package-installed-p 'evil)
+  (package-install 'evil))
 
 (use-package magit
   :ensure t
@@ -63,11 +68,30 @@
   :config
   (add-hook 'org-mode-hook 'org-bullets-mode))
 
-(use-package smartparens
+;; (use-package smartparens
+;;   :ensure t
+;;   :config
+;;   (require 'smartparens-config)
+;;   (smartparens-global-mode))
+
+
+(use-package evil
+  :ensure t
+  :init
+  (setq evil-want-integration t) ;; This is optional since it's already set to t by default.
+  (setq evil-want-keybinding nil)
+  :config
+  (evil-mode 1))
+
+(use-package evil-collection
+  :after evil
   :ensure t
   :config
-  (require 'smartparens-config)
-  (smartparens-global-mode))
+  (evil-collection-init))
+
+;; Enable Evil
+(require 'evil)
+(evil-mode 1)
 
 (add-hook 'emacs-lisp-mode-hook 'eldoc-mode)
 
@@ -85,3 +109,17 @@
   (when (file-exists-p personal-settings)
     (message "Loading personal settings...")
     (load-file personal-settings)))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(evil-collection evil spacemacs-theme spaceline smartparens org-bullets magit fullframe counsel)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
